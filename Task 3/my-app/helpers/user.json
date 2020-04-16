@@ -1,0 +1,32 @@
+{
+    "prashant": {
+        "fullname": "Prashant Choudhary",
+        "email": "node@completed.com",
+        "mobile": "123456789",
+        "password": "12345678"
+    },
+    "pkc": {
+        "fullname": "Pkc Prashant",
+        "email": "node@completed.com",
+        "mobile": "123456789",
+        "password": "12345678"
+    },
+    "user1": {
+        "fullname": "User 1",
+        "email": "node@completed.com",
+        "mobile": "123456789",
+        "password": "12345678"
+    },
+    "user2": {
+        "fullname": "User 2",
+        "email": "node@completed.com",
+        "mobile": "123456789",
+        "password": "12345678"
+    },
+    "user3": {
+        "fullname": "User 3",
+        "email": "node@completed.com",
+        "mobile": "123456789",
+        "password": "12345678"
+    }
+}
