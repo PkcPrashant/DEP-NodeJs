@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+    <title>User Profile</title>
+</head>
+<body class="text-center" onload="loadUserProfile()">
+    <header class="d-flex justify-content-between m-2">
+        <h4>LOGO</h4>
+        <h4 class="text-capitalize" id="username"></h4>
+        <h4>Signout</h4>
+    </header>
+    <div class="d-flex flex-row justify-content-around">
+        <h3>Create New Post:</h3>
+        <textarea class="w-50" id="newpost"></textarea>
+        <button class="btn btn-primary w-25" onclick="loadNewPost()">Post</button>
+    </div>
+    <hr>
+    <div id="profile"></div>
+    <script src="javascripts/profile.js"></script>
+</body>
+</html>
