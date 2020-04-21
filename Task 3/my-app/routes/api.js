@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const data = require('../helpers/data.json');
+const auth = require('../middleware/auth');
 
 router.post('/auth', (req, res) => {
     const username = req.body.username;
@@ -16,20 +17,6 @@ router.post('/auth', (req, res) => {
         res.status(302).header({Location: '/login.html'}).send({});
     }
 })
-
-const auth = (req, res, next) => {
-    const cookies = req.cookies;
-    fs.readFile(path.join(__dirname, '../helpers/user.json'), (err, data) => {
-        if(err) throw err;
-        const password = (JSON.parse(data))[cookies.username].password;
-        const auth_token = crypto.createHash('sha1').update(cookies.username+password).digest('hex');
-        if(cookies.username && (cookies.auth_token === auth_token)) {
-            next();
-        } else {
-            res.status(302).send({"location": '/login.html'});
-        }
-    })
-};
 
 router.get('/user', auth, (req, res) => {
     res.header({'Content-Type': 'application/json'})
